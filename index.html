@@ -114,35 +114,39 @@
             margin-bottom: 2rem;
         }
 
-    .profile-img {
-    width: 200px;
+ /* ======================================= */
+/* ĐỊNH NGHĨA CHO KHUNG CHỨA HÌNH ẢNH */
+/* ======================================= */
+.profile-img {
+    /* 💥 KHÓA KÍCH THƯỚC Ở 100x100px */
+    width: 200px; 
     height: 200px;
+    
     border-radius: 50%;
-    margin: 2rem auto;
-    background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
-    display: flex;
+    margin: 0 auto 10px auto;
+    
+    /* Màu nền xanh bạn muốn (hoặc background: none; nếu ảnh có nền sẵn) */
+    background-color: #007bff; 
+    
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.5); 
+    overflow: hidden; 
+    
+    display: flex; 
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
-    color: white;
-    box-shadow: 0 8px 20px rgba(94, 114, 228, 0.3); 
-    /* 👈 THÊM DÒNG NÀY ĐỂ CẮT ẢNH THỪA RA KHỎI KHUNG TRÒN */
-    overflow: hidden; 
 }
 
-    /* KHỐI CSS MỚI: ĐỊNH KIỂU CHO THẺ ẢNH BÊN TRONG */
-    .profile-img img {
-    /* Đảm bảo ảnh chiếm hết không gian của .profile-img */
+/* ======================================= */
+/* ĐỊNH NGHĨA CHO THẺ ẢNH BÊN TRONG */
+/* ======================================= */
+.profile-img img {
+    /* Đảm bảo ảnh lấp đầy toàn bộ khung 70x70px */
     width: 100%;
-    height: 100%;
-    /* Quan trọng: Giữ tỷ lệ khung hình và lấp đầy toàn bộ phần tử */
-    object-fit: cover;
-    /* Loại bỏ background gradient khi ảnh được chèn vào */
-    background: none; 
-    /* Đảm bảo ảnh được hiển thị thay vì biểu tượng mặc định */
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 50%; 
     display: block; 
 }
-
         .cv-section {
             margin: 2rem 0;
         }
@@ -446,7 +450,7 @@
         <div id="home" class="page active">
             <div class="hero">
                 <div class="profile-img">
-                    <img **src="C:\personal-blog\image\profile-pic.jpg\ảnh đại diện của tôi.jpg"**                     alt="Ảnh đại diện">
+                    <img src="image/profile_pic.jpg/anhdaidien.jpg" alt="anhdaidien.jpg">
                 </div>
 
                 <h1>Xin Chào, Tôi Là Nguyễn Xuân Trường</h1>
