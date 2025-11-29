@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Cá Nhân - Nguyễn Xuân Trường</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #5e72e4;
+        }
+
+        main {
+            padding: 2rem 0;
+            flex-grow: 1;
+        }
+
+        .page {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            animation: fadeIn 0.5s;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+    .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    box-shadow: 0 8px 20px rgba(94, 114, 228, 0.3); 
+    /* 👈 THÊM DÒNG NÀY ĐỂ CẮT ẢNH THỪA RA KHỎI KHUNG TRÒN */
+    overflow: hidden; 
+}
+
+    /* KHỐI CSS MỚI: ĐỊNH KIỂU CHO THẺ ẢNH BÊN TRONG */
+    .profile-img img {
+    /* Đảm bảo ảnh chiếm hết không gian của .profile-img */
+    width: 100%;
+    height: 100%;
+    /* Quan trọng: Giữ tỷ lệ khung hình và lấp đầy toàn bộ phần tử */
+    object-fit: cover;
+    /* Loại bỏ background gradient khi ảnh được chèn vào */
+    background: none; 
+    /* Đảm bảo ảnh được hiển thị thay vì biểu tượng mặc định */
+    display: block; 
+}
+
+        .cv-section {
+            margin: 2rem 0;
+        }
+        
+        .cv-section h2 {
+            color: #5e72e4;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #5e72e4;
+        }
+
+        .cv-item {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #825ee4;
+        }
+
+        .cv-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-item .date {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .cv-item p {
+            margin-top: 0.5rem;
+            color: #555;
+        }
+        
+        .skill-rating-grid {
+            display: flex;
+            gap: 40px;
+            margin-top: 2rem;
+        }
+
+        .skill-column {
+            flex: 1;
+        }
+
+        .skill-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd; 
+        }
+
+        .skill-name {
+            flex-basis: 60%; 
+            font-weight: 500;
+        }
+
+        .special-skill {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .special-level {
+            color: #5e72e4; 
+            font-weight: bold;
+        }
+
+        .skill-bar {
+            flex-basis: 40%; 
+            color: #4CAF50; 
+            letter-spacing: 2px;
+            font-weight: bold;
+            overflow: hidden; 
+        }
+
+        .skill-bar::before {
+            content: "XXXXX"; 
+            display: block;
+        }
+
+        .skill-bar[data-level="5"] { width: 100%; }
+        .skill-bar[data-level="4"] { width: 80%; } 
+        .skill-bar[data-level="3"] { width: 60%; } 
+        .skill-bar[data-level="2"] { width: 40%; } 
+        .skill-bar[data-level="1"] { width: 20%; } 
+
+        @media (max-width: 768px) {
+            .skill-rating-grid {
+                flex-direction: column; 
+                gap: 0;
+            }
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(94, 114, 228, 0.3);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid #e8eaf6;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(94, 114, 228, 0.2);
+        }
+
+        .blog-card h3 {
+            color: #5e72e4;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card .date {
+            color: #999;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e8eaf6;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-card h3 {
+            color: #5e72e4; 
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p a {
+            color: #555 !important; 
+            text-decoration: none; 
+            transition: color 0.3s;
+            word-wrap: break-word; 
+            display: block; 
+        }
+
+        .contact-card p a:hover {
+            color: #5e72e4 !important; 
+        }
+        
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 2rem;
+        }
+
+        #post-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .post-meta {
+            color: #999;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        #post-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(94, 114, 228, 0.4);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.98);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            box-shadow: 0 -2px 15px rgba(0,0,0,0.08);
+        }
+        
+        footer p:first-child {
+            font-weight: 500;
+            color: #333; 
+        }
+
+        footer p:last-child {
+            color: #666;
+        }
+
+        .certificate-thumbnail {
+            max-width: 100%;
+            max-height: 400px;
+            height: auto;
+            margin-top: 1rem;
+            border: 2px solid #e8eaf6;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .certificate-thumbnail:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(94, 114, 228, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .page {
+                padding: 1.5rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Blog Của Tôi</div>
+            <ul class="nav-links">
+                <li><a onclick="showPage('home')">Trang Chủ</a></li>
+                <li><a onclick="showPage('cv')">CV</a></li>
+                <li><a onclick="showPage('blog')">Blog</a></li>
+                <li><a onclick="showPage('contact')">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="home" class="page active">
+            <div class="hero">
+                <div class="profile-img">
+                    <img src="https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-1/559585458_1341949774006345_4839650249439840922_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFXMcUtll8HVP9Lo5Vmv-uQTCsSmM8XDo5MKxKYzxcOjjEHdIpR7aWrsbQK0FowjqV8zIS5k8cF8xOiOjIX_Hwk&_nc_ohc=VoVLB8JAKjQQ7kNvwGO_dFy&_nc_oc=AdkFEnT0DblJ-cHieeDfEa97PNzUkdgG7-vBZCd8lkhrCNOEF1nk4flSFJPQCRG-yyW_BodGzjZTlLwduJlaSn7I&_nc_zt=24&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=cEUwpidSOVJLmp_SJvGJNQ&oh=00_AfgWEGftpW1YJ-3idJ8e6ekiHYFAY9VyXCV1RajPaAmPrw&oe=6930A098" alt="Ảnh đại diện">
+                </div>
+
+                <h1>Xin Chào, Tôi Là Nguyễn Xuân Trường</h1>
+                <p>Developer | Writer | Learner</p>
+                <p style="max-width: 600px; margin: 0 auto; color: #666;">
+                    Chào mừng bạn đến với blog cá nhân của tôi. Đây là nơi tôi chia sẻ những kinh nghiệm, 
+                    kiến thức và những suy nghĩ của mình về công nghệ, cuộc sống và nhiều thứ khác.
+                </p>
+            </div>
+        </div>
+
+        <div id="cv" class="page">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Curriculum Vitae</h1>
+            
+            <div class="cv-section">
+                <h2>Thông Tin Cá Nhân</h2>
+                <p><strong>Họ Tên:</strong> Nguyễn Xuân Trường</p>
+                <p><strong>Email:</strong> nguyentruong3012k3@gmail.com</p>
+                <p><strong>Điện Thoại:</strong> 0326530224</p>
+                <p><strong>Địa Chỉ:</strong> Trảng Bom, Đồng Nai, Việt Nam</p>
+            </div>
+
+            <div class="cv-section">
+                <h2>Học Vấn</h2>
+                <div class="cv-item">
+                    <h3>Đại Học Công nghệ thông tin thành phố Hồ Chí Minh</h3>
+                    <p class="date">2021 - 2025</p>
+                    <p>Chuyên ngành: An toàn Thông tin</p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>Chứng Chỉ</h2>
+                
+                <div class="cv-item">
+                    <h3>Networking Basics Update</h3>
+                    <p class="date">16/11/2025</p>
+                    <p><strong>Nơi cấp:</strong> Cisco Networking Academy</p>
+                    <p><strong>Mô tả kỹ năng:</strong> Có khả năng giải thích các giao thức và dịch vụ mạng cơ bản (như TCP/IP, DNS, DHCP). Hiểu về các mô hình mạng (OSI, TCP/IP), các thiết bị mạng (Router, Switch), và các khái niệm về địa chỉ IP, subnetting. Có thể cấu hình mạng cơ bản và xử lý sự cố kết nối.</p>
+                    <a href="/image/certificates/NetworkingBasicsUpdate.jpg.png" target="_blank">
+                        <img src="/image/certificates/NetworkingBasicsUpdate.jpg.png" 
+                             alt="Chứng chỉ NetworkingBasicsUpdate" 
+                             class="certificate-thumbnail"
+                             title="Nhấp để xem chi tiết">
+                    </a>
+                </div>
+                
+                <div class="cv-item">
+                    <h3>JavaScript Essentials 1 Update</h3>
+                    <p class="date">19/11/2025</p>
+                    <p><strong>Nơi cấp:</strong> Cisco Networking Academy</p>
+                    <p><strong>Mô tả kỹ năng:</strong> Nắm vững nền tảng lập trình JavaScript: khai báo biến ('let', 'const'), các kiểu dữ liệu cơ bản, toán tử, cấu trúc điều kiện ('if', 'switch') và vòng lặp ('for', 'while'). Có khả năng định nghĩa và sử dụng hàm, thao tác với mảng và chuỗi cơ bản, áp dụng tư duy giải quyết vấn đề qua các bài toán thuật toán đơn giản.</p>
+                    <a href="/image/certificates/JavaScriptEssentials1Update.png" target="_blank">
+                        <img src="/image/certificates/JavaScriptEssentials1Update.jpg.png" 
+                             alt="Chứng chỉ JavaScript Essentials 1 Update" 
+                             class="certificate-thumbnail"
+                             title="Nhấp để xem chi tiết">
+                    </a>
+                </div>
+
+                <div class="cv-item">
+                    <h3>JavaScript Essentials 2 Update</h3>
+                    <p class="date">22/11/2025</p>
+                    <p><strong>Nơi cấp:</strong> Cisco Networking Academy</p>
+                    <p><strong>Mô tả kỹ năng:</strong> Vận dụng thành thạo lập trình hướng đối tượng trong JavaScript: tạo và thao tác object, destructuring, làm việc với JSON. Sử dụng các phương thức mảng nâng cao ('map', 'filter', 'reduce'). Hiểu và áp dụng lập trình bất đồng bộ qua Promise và async/await. Có khả năng tương tác cơ bản với DOM, xử lý sự kiện, gọi API RESTful bằng fetch(), và tổ chức mã theo mô-đun (ES6 Modules).</p>
+                    <a href="/image/certificates/JavaScriptEssentials2Update.png" target="_blank">
+                        <img src="/image/certificates/JavaScriptEssentials2Update.jpg.png" 
+                             alt="Chứng chỉ JavaScript Essentials 2 Update" 
+                             class="certificate-thumbnail"
+                             title="Nhấp để xem chi tiết">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>Kỹ Năng</h2>
+                
+                <div class="skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">C#</span> 
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+                
+                <div class="skill-rating-grid">
+                    <div class="skill-column">
+                        <div class="skill-entry">
+                            <span class="skill-name">Nghiên cứu</span>
+                            <div class="skill-bar" data-level="4"></div>
+                        </div>
+                        
+                        <div class="skill-entry">
+                            <span class="skill-name">Làm việc nhóm</span>
+                            <div class="skill-bar" data-level="3"></div>
+                        </div>
+                        
+                        <div class="skill-entry special-skill">
+                            <span class="skill-name">Tiếng Anh</span>
+                            <span class="special-level">TOEIC</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-column">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>Dự Án Nổi Bật</h2>
+                
+                <div class="cv-item">
+                    <h3>Hệ thống Quản lý Quán Net</h3>
+                    <p>Xây dựng một hệ thống quản lý toàn diện cho quán net, bao gồm các chức năng chính như:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Quản lý tài khoản và phiên chơi:</strong> Đăng nhập/Đăng xuất, tính giờ tự động</li>
+                        <li><strong>Quản lý dịch vụ:</strong> Bán hàng, quản lý kho và in hóa đơn</li>
+                        <li><strong>Báo cáo và Thống kê:</strong> Theo dõi doanh thu và hiệu suất</li>
+                    </ul>
+                </div>
+                
+                <div class="cv-item">
+                    <h3>Task Management App</h3>
+                    <p>Ứng dụng quản lý công việc với React và Firebase, hỗ trợ real-time collaboration.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="blog" class="page">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Bài Viết Của Tôi</h1>
+            
+            <div class="blog-grid">
+                <div class="blog-card" data-slug="ly-do-chon-nganh-attt">
+                    <h3>🛡️ Tại Sao Tôi Chọn An Toàn Thông Tin</h3>
+                    <p class="date">20/11/2025</p>
+                    <p>An toàn Thông tin là ngành mang tính thiết yếu trong kỷ nguyên số. Tôi chọn ngành này vì thử thách trí tuệ, vai trò tác động lớn và cơ hội nghề nghiệp rộng mở...</p>
+                </div>
+
+                <div class="blog-card" data-slug="uu-tien-hoc-tieng-anh"> 
+                    <h3>🌐 Vì Sao Ưu Tiên Học Tiếng Anh</h3>
+                    <p class="date">20/11/2025</p>
+                    <p>Tiếng Anh vẫn nắm giữ vị thế độc tôn do tính phổ quát và phạm vi ứng dụng rộng lớn, là ngôn ngữ chung trong kinh doanh, khoa học và kỹ thuật số...</p>
+                </div>
+                
+                <div class="blog-card" data-slug="dieu-hoc-duoc-tu-lap-trinh"> 
+                    <h3>💡 Những Điều Tôi Học Được Từ Lập Trình</h3>
+                    <p class="date">19/11/2025</p>
+                    <p>Lập trình không chỉ dạy tôi về code, mà còn về cách tư duy logic, giải quyết vấn đề và kiên nhẫn. Mỗi bug là một bài học...</p>
+                </div>
+                
+                <div class="blog-card" data-slug="bo-cuoc">
+                    <h3>🌱 Tôi Đã Từng Muốn Bỏ Cuộc</h3>
+                    <p class="date">15/11/2025</p>
+                    <p>Con đường học tập đầy rẫy chông gai và áp lực vô hình. Đã có lúc tôi muốn buông xuôi, nhưng hai điều quan trọng đã giúp tôi lấy lại niềm tin...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="page">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Liên Hệ Với Tôi</h1>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:nguyentruong3012k3@gmail.com" target="_blank">nguyentruong3012k3@gmail.com</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>📱 Điện Thoại</h3>
+                    <p><a href="tel:+84326530224">0326530224</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>💼 LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/nguy%E1%BB%85n-tr%C6%B0%E1%BB%9Dng-30b8a6391/" target="_blank">linkedin.com/in/nguyễn-trường</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>💻 GitHub</h3>
+                    <p><a href="https://github.com/Dragon3012" target="_blank">github.com/Dragon3012</a></p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #666;">
+                    Cảm ơn bạn đã ghé thăm blog của tôi! Nếu bạn có bất kỳ câu hỏi hay muốn hợp tác, 
+                    đừng ngại liên hệ với tôi qua các kênh trên nhé.
+                </p>
+            </div>
+        </div>
+        
+        <div id="post-detail" class="page">
+            <article class="post-content">
+                <button id="back-to-blog" class="back-button" onclick="showPage('blog')">
+                    ← Quay lại Blog
+                </button>
+                
+                <h1 id="post-title"></h1>
+                <p class="post-meta">
+                    <span id="post-date"></span> | Tác giả: Nguyễn Xuân Trường
+                </p>
+                <hr>
+                <div id="post-body"></div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nguyễn Xuân Trường. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">Made with ❤️ and ☕</p>
+    </footer>
+    
+    <script>
+        const blogPosts = {
+            'uu-tien-hoc-tieng-anh': {
+                title: '🌐 Vì Sao Ưu Tiên Học Tiếng Anh Trong Bối Cảnh Toàn Cầu',
+                date: '20/11/2025',
+                body: `
+                    <p>Việc học các ngôn ngữ khu vực như Tiếng Trung, Nhật, hay Hàn rất giá trị, nhưng Tiếng Anh vẫn nắm giữ vị thế độc tôn do tính phổ quát và phạm vi ứng dụng rộng lớn, bao trùm mọi lĩnh vực toàn cầu.</p>
+
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">1. Ngôn Ngữ Chung và Kinh Doanh Toàn Cầu</h3>
+                    <p>Tiếng Anh là ngôn ngữ chung (lingua franca) mặc định của thế giới. Nó là phương tiện giao tiếp chính thức trong hàng không, ngoại giao, du lịch, và là ngôn ngữ làm việc nội bộ tại hầu hết các tập đoàn đa quốc gia.</p>
+
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">2. Thống Trị Trong Khoa Học và Kỹ Thuật Số</h3>
+                    <p>Tiếng Anh là cánh cửa dẫn đến tri thức đỉnh cao. Hơn 90% tài liệu nghiên cứu khoa học, các công trình đột phá trong y học, công nghệ, cùng với tài liệu lập trình đều sử dụng Tiếng Anh.</p>
+
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">3. Lợi Thế Về Hệ Thống Chữ Viết</h3>
+                    <p>Việc làm quen với hệ thống chữ cái Latin của Tiếng Anh dễ dàng và nhanh hơn rất nhiều so với việc ghi nhớ hàng nghìn ký tự tượng hình phức tạp của Tiếng Trung/Nhật.</p>
+                    
+                    <p style="font-style: italic; margin-top: 2rem; border-left: 3px solid #825ee4; padding-left: 10px;">Tóm lại: Tiếng Anh mang lại phạm vi bao phủ toàn cầu rộng lớn nhất, mở khóa nhiều cánh cửa cơ hội nhất trên mọi khía cạnh.</p>
+                `
+            },
+            'dieu-hoc-duoc-tu-lap-trinh': {
+                title: '💡 Những Điều Tôi Học Được Từ Lập Trình',
+                date: '19/11/2025',
+                body: `
+                    <p>Lập trình không chỉ là viết code; đó là về <strong>tư duy logic 🧠</strong> và <strong>giải quyết vấn đề 🛠️</strong>.</p>
+                    <p>Bài học lớn nhất tôi học được là sự <strong>kiên nhẫn 🧘</strong>. Mỗi bug (lỗi) không phải là thất bại, mà là một câu đố cần giải quyết. Quá trình tìm ra lỗi và sửa chữa nó giúp củng cố khả năng phân tích và chi tiết của tôi.</p>
+                    <p>Hơn nữa, các dự án lớn dạy tôi về <strong>quản lý thời gian ⏱️</strong> và <strong>hợp tác 🤝</strong>. Không có dự án phần mềm nào thành công mà không có sự giao tiếp rõ ràng và làm việc nhóm hiệu quả.</p>
+                `
+            },
+            'bo-cuoc': {
+                title: '🌱 Tôi Đã Từng Muốn Bỏ Cuộc Và Cách Tôi Đứng Dậy',
+                date: '15/11/2025',
+                body: `
+                    <p>Đã có lúc, tôi thực sự muốn buông xuôi. Con đường học tập mà người ngoài nhìn vào tưởng chừng như bằng phẳng, hóa ra lại đầy rẫy chông gai và áp lực vô hình.</p>
+                    
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">Động lực lớn nhất</h3>
+                    <p>Thế nhưng, mỗi khi sự nản lòng dâng lên đỉnh điểm, tôi lại nhớ đến hai điều quan trọng nhất: <strong>tương lai mình muốn xây dựng</strong> và <strong>những hy sinh thầm lặng của cha mẹ</strong>.</p>
+
+                    <p>Tôi hình dung ra cái tương lai mà tôi đã ấp ủ từ lâu—một công việc ổn định, một cuộc sống tự chủ, và khả năng chăm sóc những người thân yêu.</p>
+
+                    <p>Chính nhờ tình yêu và động lực này, tôi đã quyết định gạt bỏ ý nghĩ yếu đuối kia. Tôi bắt đầu lại, chậm rãi hơn, nhưng quyết tâm hơn.</p>
+                `
+            },
+            'ly-do-chon-nganh-attt': {
+                title: '🛡️ Tại Sao Tôi Chọn An Toàn Thông Tin',
+                date: '20/11/2025',
+                body: `
+                    <p>An toàn Thông tin (ATTT) là một ngành không chỉ hấp dẫn mà còn mang tính thiết yếu trong kỷ nguyên số. Tôi chọn ngành này vì ba lý do cốt lõi sau:</p>
+                    
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">1. ⚔️ Thử Thách Trí Tuệ Không Ngừng</h3>
+                    <p><strong>Tính Đối Kháng Cao:</strong> ATTT là cuộc chiến không hồi kết giữa người bảo vệ và kẻ tấn công. Điều này đòi hỏi bạn phải liên tục học hỏi, cập nhật và suy nghĩ phản biện.</p>
+                    
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">2. 🌍 Vai Trò Tác Động Rộng Lớn</h3>
+                    <p><strong>Bảo Vệ Hạ Tầng:</strong> Công việc của chuyên gia ATTT không chỉ là bảo vệ dữ liệu cá nhân, mà còn bảo vệ cơ sở hạ tầng quan trọng (ngân hàng, y tế, năng lượng) khỏi các cuộc tấn công gây thiệt hại trên diện rộng.</p>
+                    
+                    <h3 style="color: #5e72e4; margin-top: 1.5rem;">3. 📈 Cơ Hội Nghề Nghiệp Đầy Hứa Hẹn</h3>
+                    <p><strong>Nhu cầu Lớn:</strong> Thị trường toàn cầu đang thiếu hụt chuyên gia ATTT trầm trọng, dẫn đến mức lương và đãi ngộ rất cao.</p>
+                `
+            },
+        };
+
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function showPost(postId) {
+            const post = blogPosts[postId];
+
+            if (post) {
+                document.getElementById('post-title').innerText = post.title;
+                document.getElementById('post-date').innerText = post.date;
+                document.getElementById('post-body').innerHTML = post.body;
+                
+                showPage('post-detail');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                alert('Bài viết không tồn tại!');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+             showPage('home'); 
+
+             document.querySelectorAll('.blog-card').forEach(card => {
+                const slug = card.getAttribute('data-slug');
+                if (slug) {
+                    card.addEventListener('click', function() {
+                        showPost(slug);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
