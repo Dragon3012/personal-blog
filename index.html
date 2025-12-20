@@ -174,6 +174,11 @@
                         <p class="date">15/11/2025</p>
                         <p>Con đường học tập đầy rẫy chông gai và áp lực vô hình. Đã có lúc tôi muốn buông xuôi, nhưng hai điều quan trọng đã giúp tôi lấy lại niềm tin...</p>
                     </div>
+                    <div class="blog-card" data-slug="bai-hoc-quan-ly-quan-net">
+                        <h3>🛠️ Bài Học Từ Dự Án Quán Net</h3>
+                        <p class="date">20/12/2025</p>
+                        <p>Hành trình từ một sinh viên ATTT xây dựng hệ thống quản lý thực tế và những bài học về tư duy hệ thống...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -292,6 +297,42 @@
                     <p><strong>Nhu cầu Lớn:</strong> Thị trường toàn cầu đang thiếu hụt chuyên gia ATTT trầm trọng, dẫn đến mức lương và đãi ngộ rất cao.</p>
                 `
             },
+            'bai-hoc-quan-ly-quan-net': {
+    title: '🛠️ Từ Code Dạo Đến Hệ Thống Quản Lý Quán Net: Những Bài Học "Xương Máu"',
+    date: '20/12/2025',
+    body: `
+        <p>Nhiều người hỏi mình: <em>"Học An toàn thông tin sao lại đi viết phần mềm quản lý Quán Net?"</em>. Thực ra, dự án này không chỉ là một bài tập lập trình, mà là "chiến trường" đầu tiên giúp mình hiểu thế nào là xây dựng một hệ thống thực thụ.</p>
+
+        <h3>1. Tại sao lại là Quán Net?</h3>
+        <p>Ý tưởng bắt đầu rất tình cờ khi mình ngồi net và thấy hệ thống quản lý có vẻ... khô khan. Với tư cách là một sinh viên công nghệ, mình tự hỏi: <strong>"Nếu mình làm, mình sẽ tối ưu nó như thế nào?"</strong>. Và thế là dự án bắt đầu.</p>
+
+        <h3>2. Những "cú tát" đầu tiên từ thực tế</h3>
+        <p>Lúc mới bắt đầu, mình nghĩ đơn giản: <em>"Chỉ cần tính giờ rồi nhân với đơn giá là xong"</em>. Nhưng thực tế lại "tát" cho mình tỉnh mộng với hàng tá vấn đề:</p>
+        <ul>
+            <li><strong>Xử lý nạp tiền:</strong> Làm sao để khi khách đang chơi mà hết tiền thì hệ thống tự động khóa máy ngay lập tức?</li>
+            <li><strong>Quản lý dịch vụ:</strong> Khách gọi mì tôm, nước ngọt... tồn kho phải trừ đi, doanh thu phải cộng vào.</li>
+            <li><strong>Tính đồng bộ:</strong> Nhiều máy trạm kết nối về server, làm sao để dữ liệu luôn chính xác theo thời gian thực (real-time)?</li>
+        </ul>
+
+        <h3>3. Góc nhìn của một "Cybersecurity Student"</h3>
+        <p>Vì chuyên ngành của mình là ATTT, mình không thể bỏ qua khía cạnh bảo mật. Thay vì chỉ code cho chạy được, mình tập trung vào việc bảo vệ dữ liệu:</p>
+        
+        <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: 'Courier New', monospace; margin: 20px 0; border: 1px solid #333;">
+            <span style="color: #6a9955;">// Ví dụ cách mình xử lý bảo mật mật khẩu khách hàng</span><br>
+            <span style="color: #569cd6;">string</span> password = <span style="color: #ce9178;">"khachhang123"</span>;<br>
+            <span style="color: #569cd6;">string</span> hashedPassword = BCrypt.HashPassword(password); <br>
+            <span style="color: #6a9955;">// Không bao giờ lưu text thuần vào Database!</span>
+        </div>
+
+        <h3>4. Bài học rút ra: "Chai lì là chìa khóa"</h3>
+        <p>Có những đêm mình thức trắng chỉ để xử lý một lỗi nhỏ ở phần in hóa đơn. Nhưng giống như các tiền bối đã chia sẻ trên <em>Ký sự BrSE</em>: <strong>"Chỉ cần chai lì là ổn"</strong>.</p>
+        <p>Lập trình dạy mình cách đối mặt với sự cố. Khi một hệ thống lớn gặp lỗi, người làm ATTT giỏi là người phải giữ được cái đầu lạnh để tìm ra nguyên nhân và khắc phục.</p>
+
+        <p style="font-style: italic; margin-top: 2rem; border-left: 3px solid #667eea; padding-left: 15px;">
+            Dự án này là minh chứng cho sự nỗ lực và tư duy hệ thống của mình. Đừng sợ sai, vì mỗi lỗi sai là một bài học giúp bạn "lớn" lên.
+        </p>
+    `
+        },
         };
 
         function showPage(pageId) {
@@ -335,4 +376,4 @@
         });
     </script>
 </body>
-</html>
+</html><script>
