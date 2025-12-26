@@ -588,26 +588,53 @@ footer p:last-child {
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.3s;
+/* Tùy chỉnh hiển thị kỹ năng hiện đại hơn */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
 }
 
 .skill-item:hover {
     background: rgba(102, 126, 234, 0.1);
-    transform: translateX(5px);
+    transform: translateX(8px);
+    border-color: rgba(102, 126, 234, 0.4);
 }
 
-.skill-name {
-    color: #e0e0e0;
-    font-weight: 600;
+/* Hiệu ứng sao mới */
+.stars {
+    display: flex;
+    gap: 4px;
 }
 
 .star {
-    color: #444; /* Màu sao chưa đạt */
     font-size: 1.2rem;
-    margin-left: 2px;
+    color: #333; /* Màu sao trống */
+    transition: all 0.3s ease;
 }
 
 .star.filled {
-    color: #ffcc00; /* Màu vàng cho sao đã đạt */
-    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+    color: #ffcc00; /* Màu vàng thương hiệu */
+    /* Hiệu ứng phát sáng nhẹ nhàng */
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6), 
+                 0 0 15px rgba(255, 204, 0, 0.2);
+}
+
+/* Thêm hiệu ứng khi hover vào ngôi sao */
+.skill-item:hover .star.filled {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
 }
