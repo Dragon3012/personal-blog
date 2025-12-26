@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Cá Nhân - Nguyễn Xuân Trường</title>
+    <title>Trang Chủ - Nguyễn Xuân Trường</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,281 +11,30 @@
         <nav class="container">
             <div class="logo">NXT</div>
             <ul class="nav-links">
-                <li><a onclick="showPage('home')">Trang Chủ</a></li>
-                <li><a onclick="showPage('cv')">CV</a></li>
-                <li><a onclick="showPage('blog')">Blog</a></li>
-                <li><a onclick="showPage('contact')">Liên Hệ</a></li>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-        <div id="home" class="page active">
-            <div class="hero">
-                <div class="profile-img">
-                    <img src="image/profile_pic/avatar.jpg" alt="Ảnh đại diện">
-                </div>
-                <h1>Nguyễn Xuân Trường</h1>
-                <p>Developer | Writer | Learner</p>
-                <p style="max-width: 700px; margin: 0 auto;">
-                    Chào mừng bạn đến với không gian cá nhân của tôi. Nơi tôi chia sẻ hành trình, 
-                    kiến thức và đam mê về công nghệ, lập trình và cuộc sống.
-                </p>
+        <div class="hero">
+            <div class="profile-img">
+                <img src="image/profile_pic/avatar.jpg" alt="Ảnh đại diện">
             </div>
-        </div>
-
-        <div id="cv" class="page">
-            <div class="card">
-                <h1 style="text-align: center; margin-bottom: 3rem; color: #fff; font-size: 3rem;">Curriculum Vitae</h1>
-                
-                <div class="cv-section">
-                    <h2>Thông Tin Cá Nhân</h2>
-                    <p><strong>Họ Tên:</strong> Nguyễn Xuân Trường</p>
-                    <p><strong>Email:</strong> nguyentruong3012k3@gmail.com</p>
-                    <p><strong>Điện Thoại:</strong> 0326530224</p>
-                    <p><strong>Địa Chỉ:</strong> Trảng Bom, Đồng Nai, Việt Nam</p>
-                </div>
-
-                <div class="cv-section">
-                    <h2>Học Vấn</h2>
-                    <div class="cv-item">
-                        <h3>Trường Đại học Công nghệ TP.HCM (HUTECH)</h3>
-                        <p class="date">2021 - 2025</p>
-                        <p>Chuyên ngành: An toàn Thông tin</p>
-                    </div>
-                </div>
-
-                <div class="cv-section">
-                    <h2>Chứng Chỉ</h2>
-                    
-                    <div class="cv-item">
-                        <h3>Networking Basics Update</h3>
-                        <p class="date">16/11/2025</p>
-                        <p><strong>Nơi cấp:</strong> Cisco Networking Academy</p>
-                        <p><strong>Mô tả:</strong> Nắm vững nền tảng về giao thức mạng, mô hình OSI và thiết bị mạng cơ bản.</p>
-                        <a href="image/certificates/NetworkingBasicsUpdate.jpg.png" target="_blank">
-                            <img src="image/certificates/NetworkingBasicsUpdate.jpg.png" class="certificate-thumbnail">
-                        </a>
-                    </div>
-
-                    <div class="cv-item">
-                        <h3>JavaScript Essentials 1</h3>
-                        <p class="date">2025</p>
-                        <p><strong>Nơi cấp:</strong> Cisco Networking Academy</p>
-                        <p><strong>Mô tả:</strong> Thành thạo cú pháp cơ bản, kiểu dữ liệu, vòng lặp và xử lý hàm trong JS.</p>
-                        <a href="image/certificates/JavaScriptEssentials1Update.jpg.png" target="_blank">
-                            <img src="image/certificates/JavaScriptEssentials1Update.jpg.png" class="certificate-thumbnail">
-                        </a>
-                    </div>
-
-                    <div class="cv-item">
-                        <h3>JavaScript Essentials 2</h3>
-                        <p class="date">2025</p>
-                        <p><strong>Nơi cấp:</strong> Cisco Networking Academy</p>
-                        <p><strong>Mô tả:</strong> Vận dụng lập trình hướng đối tượng, xử lý bất đồng bộ và thao tác với DOM.</p>
-                        <a href="image/certificates/JavaScriptEssentials2Update.jpg.png" target="_blank">
-                            <img src="image/certificates/JavaScriptEssentials2Update.jpg.png" class="certificate-thumbnail">
-                        </a>
-                    </div>
-
-                    <div class="cv-item">
-                        <h3>EF SET Certificate</h3>
-                        <p class="date">06/12/2025</p>
-                        <p><strong>Nơi cấp:</strong> EF Standard English Test</p>
-                        <p><strong>Mô tả:</strong> Chứng nhận trình độ tiếng Anh nền tảng (A1).</p>
-                        <a href="image/certificates/EF_SET_Certificate_Thumbnail.png" target="_blank">
-                            <img src="image/certificates/EF_SET_Certificate_Thumbnail.png" class="certificate-thumbnail">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cv-section">
-                    <h2>Kỹ Năng</h2>
-                    <div class="skills">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="cv-section">
-                    <h2>Dự Án Nổi Bật</h2>
-                    <div class="cv-item">
-                        <h3>Hệ thống Quản lý Quán Net</h3>
-                        <p>Xây dựng hệ thống quản lý toàn diện: tính giờ, quản lý kho và bảo mật dữ liệu khách hàng.</p>
-                    </div>
-                    <div class="cv-item">
-                        <h3>Task Management App</h3>
-                        <p>Ứng dụng quản lý công việc real-time sử dụng React và Firebase.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div id="blog" class="page">
-            <div class="card">
-                <h1 style="text-align: center; margin-bottom: 3rem; color: #fff; font-size: 3rem;">Bài Viết Của Tôi</h1>
-                <div class="blog-grid">
-                    <div class="blog-card" data-slug="tai-sao-chon-attt">
-                        <h3>🛡️ An Toàn Thông Tin: Một Sứ Mệnh</h3>
-                        <p class="date">20/12/2025</p>
-                        <p>Đây không chỉ là một ngành học, mà là một cuộc chiến cân não...</p>
-                    </div>
-                    <div class="blog-card" data-slug="uu-tien-hoc-tieng-anh"> 
-                        <h3>🌐 Vì Sao Ưu Tiên Học Tiếng Anh</h3>
-                        <p class="date">20/11/2025</p>
-                        <p>Quyết định chiến lược mang lại lợi thế cạnh tranh vượt trội...</p>
-                    </div>
-                    <div class="blog-card" data-slug="bo-cuoc">
-                        <h3>🌱 Tôi Đã Từng Muốn Bỏ Cuộc</h3>
-                        <p class="date">15/11/2025</p>
-                        <p>Hành trình vượt qua hoang mang nhờ điểm tựa gia đình...</p>
-                    </div>
-                    <div class="blog-card" data-slug="dieu-hoc-duoc-tu-lap-trinh"> 
-                        <h3>💡 Học Được Từ Lập Trình</h3>
-                        <p class="date">19/11/2025</p>
-                        <p>Về tư duy logic, sự kiên nhẫn và cách giải quyết vấn đề...</p>
-                    </div>
-                    <div class="blog-card" data-slug="bai-hoc-quan-ly-quan-net">
-                        <h3>🛠️ Bài Học Từ Dự Án Quán Net</h3>
-                        <p class="date">20/12/2025</p>
-                        <p>Những bài học "xương máu" về xây dựng hệ thống và bảo mật...</p>
-                    </div>
-                    <div class="blog-card" data-slug="review-chung-chi-cisco">
-                        <h3>🎓 Review Lấy Chứng Chỉ Cisco</h3>
-                        <p class="date">21/12/2025</p>
-                        <p>Bước đệm quan trọng cho ngành Mạng và Bảo mật...</p>
-                    </div>
-                    <div class="blog-card" data-slug="cong-cu-bao-mat">
-                        <h3>🔍 Top 5 Công Cụ Bảo Mật</h3>
-                        <p class="date">22/12/2025</p>
-                        <p>Làm quen với Nmap, Wireshark, Burp Suite và các vũ khí ATTT...</p>
-                    </div>
-                    <div class="blog-card" data-slug="lam-blog-ca-nhan">
-                        <h3>💻 Tại Sao Tự Code Blog?</h3>
-                        <p class="date">23/12/2025</p>
-                        <p>Rèn luyện tư duy Front-end và quản lý mã nguồn qua Git...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact" class="page">
-            <div class="card">
-                <h1 style="text-align: center; margin-bottom: 3rem; color: #fff; font-size: 3rem;">Liên Hệ</h1>
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <h3>📧 Email</h3>
-                        <p><a href="mailto:nguyentruong3012k3@gmail.com">nguyentruong3012k3@gmail.com</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>📱 Điện Thoại</h3>
-                        <p><a href="tel:+84326530224">0326530224</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>💼 LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/nguy%E1%BB%85n-tr%C6%B0%E1%BB%9Dng-30b8a6391/" target="_blank">LinkedIn Profile</a></p>
-                    </div>
-                </div>
-                <div class="contact-info-secondary" style="margin-top: 20px;">
-                    <div class="contact-card">
-                        <h3>💻 GitHub</h3>
-                        <p><a href="https://github.com/Dragon3012" target="_blank">GitHub Profile</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>👤 Facebook</h3>
-                        <p><a href="https://www.facebook.com/share/1WiNswg3ze/" target="_blank">Facebook Profile</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="post-detail" class="page">
-            <div class="card">
-                <article class="post-content">
-                    <button class="back-button" onclick="showPage('blog')">← Quay lại Blog</button>
-                    <h1 id="post-title"></h1>
-                    <p class="post-meta"><span id="post-date"></span> | Tác giả: Nguyễn Xuân Trường</p>
-                    <hr style="border: none; height: 1px; background: rgba(255,255,255,0.1); margin: 2rem 0;">
-                    <div id="post-body"></div>
-                </article>
-            </div>
+            <h1>Nguyễn Xuân Trường</h1>
+            <p>Sinh viên Trường Đại học Công nghệ TP.HCM (HUTECH)</p>
+            <p style="max-width: 700px; margin: 0 auto;">
+                Chào mừng bạn đến với không gian cá nhân của tôi. Nơi tôi chia sẻ hành trình, 
+                kiến thức và đam mê về công nghệ, lập trình và cuộc sống.
+            </p>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Nguyễn Xuân Trường. Made with ❤️ at HUTECH</p>
     </footer>
-
-    <script>
-        const blogPosts = {
-            'tai-sao-chon-attt': {
-                title: '🛡️ An Toàn Thông Tin: Không Chỉ Là Nghề, Đó Là Một Sứ Mệnh',
-                date: '20/12/2025',
-                body: `<p>Có bao giờ bạn tự hỏi điều gì đứng sau sự vận hành ổn định của hàng tỷ giao dịch ngân hàng mỗi ngày? Với mình, câu trả lời nằm ở hai chữ: An toàn Thông tin (ATTT). Đây không chỉ là một ngành học, mà là một cuộc chiến cân não thực sự trong kỷ nguyên số.</p><h3>1. "Cú hích" từ thực tế tại HUTECH</h3><p>Tại HUTECH, mình nhận ra rằng lý thuyết chỉ là bề nổi. Những buổi workshop cùng chuyên gia đã giúp mình hiểu: ATTT là cuộc chiến không hồi kết giữa phòng thủ và tấn công. Bạn phải nghĩ như hacker thì mới có thể xây dựng những thành trì vững chắc nhất.</p><p><strong>Tư duy của mình:</strong> Một hệ thống mạnh không chỉ nằm ở code giỏi, mà nằm ở một kiến trúc an toàn đa lớp và khả năng phản ứng tức thời trước mối đe dọa.</p><h3>2. Tầm nhìn và sứ mệnh cá nhân</h3><p>Trong thế giới số đang bùng nổ, mình chọn dấn thân vào con đường này không chỉ vì đam mê thử thách trí tuệ, mà còn vì mong muốn trở thành người bảo vệ cho những giá trị quan trọng nhất: quyền riêng tư, tài sản số và sự an toàn của cộng đồng trong không gian mạng đầy rủi ro.</p>`
-            },
-            'uu-tien-hoc-tieng-anh': {
-                title: '🌐 Vì Sao Ưu Tiên Học Tiếng Anh Trong Bối Cảnh Toàn Cầu',
-                date: '20/11/2025',
-                body: `<p>Việc ưu tiên học tiếng Anh trong bối cảnh toàn cầu hóa hiện nay là một quyết định chiến lược mang lại lợi thế cạnh tranh vượt trội.</p><p>Thứ nhất, tiếng Anh là ngôn ngữ của kinh tế quốc tế. Hơn 1.5 tỷ người sử dụng tiếng Anh trên toàn thế giới, giúp kết nối doanh nghiệp, mở rộng thị trường và tạo cơ hội việc làm đa dạng. Các công ty đa quốc gia đều yêu cầu tiếng Anh như tiêu chuẩn cơ bản.</p><p>Thứ hai, đây là chìa khóa tri thức. 80% nội dung học thuật, nghiên cứu khoa học và tài liệu chuyên ngành được xuất bản bằng tiếng Anh. Việc thành thạo ngôn ngữ này giúp tiếp cận nguồn tri thức khổng lồ mà không cần chờ bản dịch.</p><p>Thứ ba, tiếng Anh phá vỡ rào cản văn hóa. Du học, du lịch, giao lưu quốc tế trở nên dễ dàng hơn, giúp mở rộng tầm nhìn và xây dựng mạng lưới quan hệ toàn cầu.</p><p>Trong kỷ nguyên số, khi thế giới ngày càng phẳng, tiếng Anh không còn là lựa chọn mà đã trở thành kỹ năng thiết yếu để thành công và hội nhập.</p>`
-            },
-            'bo-cuoc': {
-                title: '🌱 Tôi Đã Từng Muốn Bỏ Cuộc Và Cách Tôi Đứng Dậy',
-                date: '15/11/2025',
-                body: `<p>Là sinh viên an toàn thông tin, tôi từng đứng giữa ngã ba đường của sự hoang mang. Giữa chừng con đường học vấn, tôi bỗng hụt hẫng khi nhận ra mình không biết tương lai sẽ đi về đâu. Những đêm dài trăn trở, tôi tự hỏi liệu mình đã chọn đúng hướng chưa, hay chỉ đang lãng phí thời gian và tiền bạc của gia đình vào một con đường mờ mịt.</p><p>Nỗi thất vọng và hoài nghi dần nuốt chửng đam mê. Tôi bắt đầu trì hoãn, điểm số sa sút, và ý định bỏ cuộc ngày càng lớn dần trong tâm trí. Chính lúc tôi sắp gục ngã, gia đình đã không đứng ngoài cuộc. Bố mẹ đã ngồi lại trò chuyện, không chỉ là lời động viên mà còn giúp tôi tìm kiếm cơ hội thực tế.</p><p>Anh họ làm trong ngành công nghệ đã giới thiệu tôi vào một dự án an toàn mạng nhỏ, nơi tôi được áp dụng kiến thức thực tế. Cái chạm đầu tiên với công việc thực tế đã thay đổi tất cả. Khi thấy mình có thể bảo vệ hệ thống khỏi tấn công, khi đồng nghiệp tin tưởng vào khả năng của mình, tôi nhận ra mình đang đi đúng đường. Gia đình không chỉ kéo tôi dậy, mà còn trao cho tôi la bàn để tự tin bước tiếp trên con đường đã chọn.</p>`
-            },
-            'dieu-hoc-duoc-tu-lap-trinh': {
-                title: '💡 Những Điều Tôi Học Được Từ Lập Trình',
-                date: '19/11/2025',
-                body: `<p>Lập trình không chỉ dạy mình về code, mà còn về cách tư duy logic 🧠 và giải quyết vấn đề 🛠️.</p><h3>1. Sự kiên nhẫn qua từng dòng code</h3><p>Bài học lớn nhất mình học được là sự kiên nhẫn 🧘. Mỗi bug là một câu đố cần giải quyết. Quá trình tìm lỗi giúp củng cố khả năng phân tích chi tiết và tỉ mỉ. Mình đã học được rằng đôi khi cần lùi lại một bước để nhìn nhận vấn đề từ góc độ khác, và sự thành công đến từ việc không bỏ cuộc trước những thử thách tưởng chừng nhỏ nhất.</p><h3>2. Quản lý và Hợp tác</h3><p>Các dự án lớn dạy mình về quản lý thời gian ⏱️ và kỹ năng hợp tác 🤝. Không có dự án phần mềm nào thành công mà không có sự giao tiếp rõ ràng và làm việc nhóm hiệu quả. Mình nhận ra rằng viết code giỏi chỉ là một nửa con đường, nửa còn lại là khả năng làm việc cùng người khác, lắng nghe ý kiến và cùng nhau tạo ra sản phẩm hoàn thiện hơn. Những buổi code review không chỉ giúp cải thiện chất lượng code mà còn rèn luyện tinh thần cầu tiến và khả năng tiếp thu phản hồi.</p>`
-            },
-            'bai-hoc-quan-ly-quan-net': {
-                title: '🛠️ Bài Học "Xương Máu" Từ Dự Án Quán Net',
-                date: '20/12/2025',
-                body: `<p>Dự án này là "chiến trường" thực tế đầu tiên giúp mình hiểu thế nào là xây dựng một hệ thống thực thụ.</p><h3>1. Những bài học từ thực tế</h3><p>Việc tính giờ tự động, quản lý kho và dịch vụ đòi hỏi sự chính xác tuyệt đối. Chỉ một sai sót nhỏ trong logic nạp tiền cũng có thể dẫn đến thất thoát doanh thu. Điều này dạy mình tính trách nhiệm trong từng dòng code. Mình đã học được rằng trong môi trường kinh doanh thực tế, code không chỉ chạy đúng mà còn phải xử lý được mọi trường hợp ngoại lệ - từ mất điện đột ngột đến khách hàng cố tình tìm lỗ hổng.</p><div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0; border: 1px solid #333;">// Bảo mật mật khẩu khách hàng bằng BCrypt<br>string hashedPassword = BCrypt.HashPassword(rawPassword);<br>// Luôn băm mật khẩu trước khi lưu vào DB!</div><p>Hơn cả việc bảo vệ dữ liệu, mình nhận ra rằng bảo mật là yếu tố sống còn của hệ thống quản lý. Từ việc kiểm soát quyền truy cập admin, mã hóa dữ liệu giao dịch, đến việc log lại mọi thao tác quan trọng - mỗi lớp bảo mật đều là một tấm khiên vững chắc. Mình tin rằng: "Chai lì là chìa khóa" để giải quyết mọi bài toán khó, nhưng sự cẩn trọng và tầm nhìn xa mới là nền tảng để xây dựng những hệ thống bền vững.</p>`
-            },
-            'review-chung-chi-cisco': {
-                title: '🎓 Review Lộ Trình Lấy Chứng Chỉ Cisco Networking Basics',
-                date: '21/12/2025',
-                body: `<p>Chứng chỉ Cisco Networking Academy là bước đệm quan trọng cho bất kỳ ai theo ngành Mạng hoặc Bảo mật.</p><h3>1. Tại sao cần chứng chỉ này?</h3><p>Nó cung cấp nền tảng vững chắc về các giao thức mạng cơ bản như TCP/IP, DNS, DHCP. Bạn sẽ hiểu sâu sắc mô hình OSI - "xương sống" của mọi hệ thống mạng, và cách các thiết bị như Router, Switch vận hành trong thực tế. Chứng chỉ này không chỉ là tấm bằng, mà là ngôn ngữ chung để bạn giao tiếp với các chuyên gia mạng toàn cầu.</p><h3>2. Kinh nghiệm học tập</h3><p>Tập trung học sâu vào mô hình OSI và kỹ năng IP Subnetting - đây là hai phần "ăn điểm" nhất trong kỳ thi. Hãy thực hành nhiều trên Packet Tracer để nắm vững lý thuyết thay vì chỉ học thuộc lòng. Mình đã dành 70% thời gian cho lab và 30% cho lý thuyết. Đừng ngại thử nghiệm các kịch bản lỗi trong Packet Tracer - chính những lần thất bại này giúp mình hiểu rõ hơn về cơ chế khắc phục sự cố. Lời khuyên cuối cùng: hãy học theo nhóm, việc giải thích cho người khác hiểu là cách tốt nhất để củng cố kiến thức của chính mình.</p>`
-            },
-            'cong-cu-bao-mat': {
-                title: '🔍 Top 5 Công Cụ Bảo Mật Cho Người Mới Bắt Đầu',
-                date: '22/12/2025',
-                body: `<p>Làm quen với các công cụ chuyên ngành là bước đi đầu tiên để trở thành một chuyên gia ATTT giỏi.</p><ul><li><strong>Nmap:</strong> Công cụ quét cổng và dịch vụ mạng hàng đầu. Giúp bạn phát triển "bản đồ" mạng, xác định các thiết bị đang hoạt động và dịch vụ đang mở - kỹ năng nền tảng cho mọi bài toán bảo mật.</li><li><strong>Wireshark:</strong> "Soi" từng gói tin để hiểu về giao thức và luồng dữ liệu. Công cụ này biến những dòng code trừu tượng thành hình ảnh trực quan, giúp bạn nắm bắt cách dữ liệu thực sự di chuyển trong mạng.</li><li><strong>Burp Suite:</strong> Không thể thiếu khi kiểm thử bảo mật Web. Từ việc bắt request, thay đổi parameters đến fuzzing - Burp Suite là người bạn đồng hành tin cậy trong việc tìm lỗ hổng ứng dụng web.</li><li><strong>Metasploit:</strong> Framework hỗ trợ khai thác lỗ hổng khổng lồ, giúp người mới hiểu quy trình pentest từ A-Z một cách có hệ thống.</li><li><strong>John the Ripper:</strong> Kiểm tra độ mạnh yếu của mật khẩu. Bài học quan trọng: mật khẩu yếu là cánh cửa mở cho mọi cuộc tấn công.</li></ul><p>Mỗi công cụ là một "vũ khí", hãy sử dụng chúng một cách có đạo đức để bảo vệ không gian mạng. Lời khuyên quan trọng: hãy thực hành trên môi trường lab được cấp phép, đừng bao giờ áp dụng vào hệ thống không có sự cho phép.</p>`
-            },
-            'lam-blog-ca-nhan': {
-                title: '💻 Tại Sao Mình Tự Code Blog Cá Nhân Thay Vì Dùng Facebook?',
-                date: '23/12/2025',
-                body: `<p>Tự xây dựng Blog giúp mình rèn luyện tư duy Front-end và cách quản lý mã nguồn qua Git.</p><h3>1. Làm chủ quy trình</h3><p>Việc triển khai lên GitHub Pages dạy mình cách vận hành một trang web thực tế. Thay vì dùng các nền tảng có sẵn, việc tự code giúp mình hiểu sâu về HTML/CSS và cấu trúc Single Page Application (SPA). Mình đã học được cách tối ưu hóa performance, implement responsive design, và xử lý các vấn đề cross-browser - những kỹ năng mà không nền tảng nào có thể dạy mình. Quá trình từ ý tưởng đến triển khai thực tế giúp mình nắm vững toàn bộ development lifecycle.</p><h3>2. Xây dựng Portfolio chuyên nghiệp</h3><p>Đây là một Portfolio sống động nhất để chứng minh năng lực tự học và sự tỉ mỉ của mình với nhà tuyển dụng. Mỗi commit trên GitHub là một bước chân khẳng định sự phát triển của mình. Nhà tuyển dụng không chỉ đọc về kỹ năng của mình, mà còn trực tiếp "chạm" vào sản phẩm - thấy được cách mình tổ chức code, tư duy UI/UX, và khả năng giải quyết vấn đề thực tế. Blog này không chỉ là nơi chia sẻ kiến thức, mà còn là minh chứng rõ ràng nhất cho đam mê và sự chuyên nghiệp trong con đường phát triển chuyên môn của mình.</p>`
-            }
-        };
-
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById(pageId);
-            if (target) target.classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        function showPost(postId) {
-            const post = blogPosts[postId];
-            if (post) {
-                document.getElementById('post-title').innerText = post.title;
-                document.getElementById('post-date').innerText = post.date;
-                document.getElementById('post-body').innerHTML = post.body;
-                showPage('post-detail');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-             document.querySelectorAll('.blog-card').forEach(card => {
-                card.addEventListener('click', () => showPost(card.dataset.slug));
-            });
-        });
-    </script>
 </body>
 </html>

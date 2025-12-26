@@ -571,3 +571,43 @@ footer p:last-child {
     grid-template-columns: 1fr;
     }
 }
+
+/* Tùy chỉnh hiển thị kỹ năng theo hàng dọc có kèm sao */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateX(5px);
+}
+
+.skill-name {
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.star {
+    color: #444; /* Màu sao chưa đạt */
+    font-size: 1.2rem;
+    margin-left: 2px;
+}
+
+.star.filled {
+    color: #ffcc00; /* Màu vàng cho sao đã đạt */
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+}

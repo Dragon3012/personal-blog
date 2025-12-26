@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết bài viết - Nguyễn Xuân Trường</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">NXT</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <article class="post-content">
+                <button class="back-button" onclick="window.location.href='blog.html'">← Quay lại Blog</button>
+                <h1 id="post-title"></h1>
+                <p class="post-meta"><span id="post-date"></span> | Tác giả: Nguyễn Xuân Trường</p>
+                <div id="post-body"></div>
+            </article>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const post = blogPosts[id];
+            if (post) {
+                document.getElementById('post-title').innerText = post.title;
+                document.getElementById('post-date').innerText = post.date;
+                document.getElementById('post-body').innerHTML = post.body;
+                document.title = post.title + " - NXT Blog";
+            }
+        });
+    </script>
+</body>
+</html>

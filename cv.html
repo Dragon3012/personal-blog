@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nguyễn Xuân Trường</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hiệu ứng phóng to ảnh (Lightbox) */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">NXT</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h1 style="text-align: center; margin-bottom: 3rem; color: #fff; font-size: 3rem;">Curriculum Vitae</h1>
+            
+            <div class="cv-section">
+                <h2>Thông Tin Cá Nhân</h2>
+                <p><strong>Họ Tên:</strong> Nguyễn Xuân Trường</p>
+                <p><strong>Email:</strong> nguyentruong3012k3@gmail.com</p>
+                <p><strong>Điện Thoại:</strong> 0326530224</p>
+                <p><strong>Địa Chỉ:</strong> Trảng Bom, Đồng Nai, Việt Nam</p>
+            </div>
+
+            <div class="cv-section">
+                <h2>Học Vấn</h2>
+                <div class="cv-item">
+                    <h3>Trường Đại học Công nghệ TP.HCM (HUTECH)</h3>
+                    <p class="date">2021 - 2025</p>
+                    <p>Chuyên ngành: An toàn Thông tin</p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>Chứng Chỉ</h2>
+                <div class="certifications-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div class="cv-item">
+                        <h3>Networking Basics Update</h3>
+                        <p class="date">16/11/2025</p>
+                        <img src="image/certificates/NetworkingBasicsUpdate.jpg.png" class="certificate-thumbnail clickable-img" style="width: 100%; cursor: zoom-in;">
+                    </div>
+                    <div class="cv-item">
+                        <h3>JavaScript Essentials 1</h3>
+                        <p class="date">19/11/2025</p>
+                        <img src="image/certificates/JavaScriptEssentials1Update.jpg.png" class="certificate-thumbnail clickable-img" style="width: 100%; cursor: zoom-in;">
+                    </div>
+                    <div class="cv-item">
+                        <h3>JavaScript Essentials 2</h3>
+                        <p class="date">22/11/2025</p>
+                        <img src="image/certificates/JavaScriptEssentials2Update.jpg.png" class="certificate-thumbnail clickable-img" style="width: 100%; cursor: zoom-in;">
+                    </div>
+                    <div class="cv-item">
+                        <h3>EF SET English Certificate</h3>
+                        <p class="date">06/12/2025</p>
+                        <img src="image/certificates/EF_SET_Certificate_Thumbnail.png" class="certificate-thumbnail clickable-img" style="width: 100%; cursor: zoom-in;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>Kỹ Năng</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <span class="skill-name">Programming (Python, SQL, C#)</span>
+                        <div class="stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                <div class="cv-section">
+                       
+                    <div class="skill-item">
+                        <span class="skill-name">Network Security (TCP/IP, Firewall)</span>
+                        <div class="stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Ethical Hacking Tools (Nmap, Burp Suite)</span>
+                        <div class="stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <div class="stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Tiếng Anh</span>
+                        <div class="stars">
+                            <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                    <h2>Dự Án Tiêu Biểu</h2>
+
+                <div class="cv-item" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <h3>🖥️ Hệ Thống Quản Lý Internet Cafe</h3>
+                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Windows-based Integrated Management System</p>
+                    <p>Xây dựng hệ thống quản lý toàn diện cho phòng máy: tính giờ, quản lý kho và bảo mật dữ liệu khách hàng.</p>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">C# / .NET</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">SQL Server</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">WinForms</span>
+                    </div>
+                </div>
+
+                <div class="cv-item" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <h3>🌍 TravelStay: Smart Booking & Destination Discovery App</h3>
+                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Mobile Application</p>
+                    <p>Hệ thống đặt phòng du lịch tích hợp tìm kiếm và quản lý lịch trình trên thiết bị di động.</p>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Android / Kotlin</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Firebase</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Material Design</span>
+                    </div>
+                </div>
+
+                <div class="cv-item" style="margin-bottom: 2.5rem;">
+                    <h3>🌓 Dark Mode UI/UX Implementation</h3>
+                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Mobile Application</p>
+                    <p>Thiết kế và triển khai tính năng chuyển đổi giao diện sáng/tối tự động và thủ công cho các ứng dụngnhằm tối ưu hóa trải nghiệm người dùng.</p>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">JavaScript</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">CSS Variables</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">LocalStorage</span>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nguyễn Xuân Trường. Made with ❤️ at HUTECH</p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.clickable-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
