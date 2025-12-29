@@ -30,16 +30,36 @@
     <script>
         // Code hiển thị danh sách blog ngay tại trang blog.html
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('blog-container');
-            Object.keys(blogPosts).forEach(slug => {
-                const post = blogPosts[slug];
-                const card = document.createElement('div');
-                card.className = 'blog-card';
-                card.innerHTML = `<h3>${post.title}</h3><p class="date">${post.date}</p><p>${post.summary || ''}</p>`;
-                card.onclick = () => { window.location.href = `post.html?id=${slug}`; };
-                container.appendChild(card);
-            });
-        });
-    </script>
-</body>
-</html>
+    const container = document.getElementById('blog-container');
+    
+    // Kiểm tra xem blogPosts có tồn tại không để tránh lỗi trắng trang
+    if (typeof blogPosts === 'undefined') {
+        console.error("Dữ liệu blogPosts không tồn tại. Kiểm tra lại file data.js");
+        return;
+    }
+
+    Object.keys(blogPosts).forEach(slug => {
+        const post = blogPosts[slug];
+        const card = document.createElement('div');
+        card.className = 'blog-card';
+        
+        // Thêm thuộc tính data-slug để CSS có thể nhận diện bài DDoS
+        card.setAttribute('data-slug', slug);
+
+        // Thêm logic hiển thị thẻ "Nổi bật" nếu là bài DDoS
+        const hotTag = (slug === 'ddos-defense-strategy') ? 
+            '<span style="background:#ffcc00; color:#000; padding:2px 8px; border-radius:10px; font-size:0.7rem; font-weight:bold; margin-left:10px;">HOT</span>' : '';
+
+        card.innerHTML = `
+            <h3>${post.title} ${hotTag}</h3>
+            <p class="date">${post.date}</p>
+            <p>${post.summary || ''}</p>
+        `;
+
+        card.onclick = () => { 
+            window.location.href = `post.html?id=${slug}`; 
+        };
+        
+        container.appendChild(card);
+    });
+});
