@@ -79,5 +79,40 @@ const blogPosts = {
                <p>Việc triển khai lên GitHub Pages dạy mình cách vận hành một trang web thực tế. Thay vì dùng các nền tảng có sẵn, việc tự code giúp mình hiểu sâu về HTML/CSS.</p>
                <h3>2. Xây dựng Portfolio chuyên nghiệp</h3>
                <p>Đây là một Portfolio sống động nhất để chứng minh năng lực tự học và sự tỉ mỉ của mình với nhà tuyển dụng.</p>`
-    }
+    },
+    'ddos-defense-strategy': {
+        title: '🛡️ DDoS: Cuộc Chiến Cân Não Và Chiến Lược Phòng Thủ Toàn Diện',
+        date: '29/12/2025',
+        summary: 'Phân tích sâu về cơ chế tấn công từ chối dịch vụ phân tán và các giải pháp bảo mật đa lớp cho hệ thống hiện đại...',
+        body: `
+            <p>Trong kỷ nguyên số, DDoS (Distributed Denial of Service) đã trở thành một trong những mối đe dọa hàng đầu đối với sự ổn định của hạ tầng mạng toàn cầu. Đây không chỉ là một kỹ thuật tấn công, mà là một cuộc chiến tiêu hao tài nguyên thực sự.</p>
+
+            <h3>1. Cơ chế tấn công: Sức mạnh của sự phân tán</h3>
+            <p>DDoS là hình thức nâng cấp của DoS, nơi kẻ tấn công không sử dụng một nguồn duy nhất mà huy động một mạng lưới khổng lồ các thiết bị bị chiếm quyền điều khiển (Botnet). Lượng lớn yêu cầu đồng loạt đổ về khiến máy chủ mục tiêu rơi vào tình trạng quá tải tài nguyên trầm trọng từ băng thông, CPU đến bộ nhớ RAM.</p>
+            <p>Mục tiêu cuối cùng là làm tê liệt dịch vụ, khiến người dùng hợp lệ không thể truy cập, gây thiệt hại khổng lồ về kinh tế và uy tín cho doanh nghiệp.</p>
+
+            <h3>2. Các hình thức tấn công phổ biến</h3>
+            <ul>
+                <li><strong>tấn công tầng liên kết (Volume-based):</strong> Làm tràn ngập băng thông bằng các gói tin rác như UDP Flood hoặc ICMP Flood.</li>
+                <li><strong>tấn công giao thức (Protocol Attacks):</strong> Khai thác các kẽ hở trong giao thức mạng như SYN Flood nhằm làm cạn kiệt bảng trạng thái của tường lửa.</li>
+                <li><strong>tấn công tầng ứng dụng (Application Layer):</strong> Nguy hiểm và tinh vi nhất, tập trung vào các request HTTP GET/POST để vắt kiệt tài nguyên xử lý của Web Server.</li>
+            </ul>
+
+            
+
+            <h3>3. Chiến lược phòng thủ đa lớp (Defense in Depth)</h3>
+            <p>Trước các cuộc tấn công ngày càng tinh vi, việc phòng thủ cần được triển khai trên nhiều lớp khác nhau:</p>
+            <ul>
+                <li><strong>Tường lửa (Firewall) & IDS/IPS:</strong> Thiết lập hàng rào ngăn chặn các mẫu truy cập bất thường và lọc lưu lượng độc hại ngay từ cửa ngõ.</li>
+                <li><strong>Rate Limiting:</strong> Cơ chế giới hạn số lượng yêu cầu từ một nguồn trong một khoảng thời gian nhất định để ngăn chặn spam request.</li>
+                <li><strong>Cân bằng tải (Load Balancing):</strong> Phân phối lưu lượng truy cập qua nhiều máy chủ khác nhau, giúp giảm áp lực cho một điểm duy nhất và duy trì tính sẵn sàng.</li>
+                <li><strong>Cloud-based Anti-DDoS:</strong> Sử dụng các dịch vụ đám mây chuyên dụng (như Cloudflare, Akamai) để "hấp thụ" và làm sạch lưu lượng truy cập khổng lồ trước khi nó chạm tới máy chủ của bạn.</li>
+            </ul>
+
+            <h3>4. Giám sát và Ứng phó sự cố</h3>
+            <p>Phòng bệnh hơn chữa bệnh. Việc giám sát hệ thống liên tục giúp phát hiện sớm các dấu hiệu bất thường về lưu lượng. Đồng thời, xây dựng một kịch bản ứng phó sự cố (Incident Response Plan) rõ ràng sẽ giúp đội ngũ kỹ thuật phản ứng nhanh chóng, giảm thiểu tối đa thời gian downtime và thiệt hại kinh tế.</p>
+            
+            <p><em>Kết luận: An toàn thông tin là một hành trình, không phải là đích đến. Hiểu rõ về DDoS là bước đầu tiên để xây dựng một hệ thống bền bỉ trước mọi cơn sóng dữ của không gian mạng.</em></p>
+        `
+    },
 };
