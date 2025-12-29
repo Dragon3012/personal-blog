@@ -25,6 +25,14 @@
             border-radius: 10px;
             box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
         }
+
+        /* Hiệu ứng thanh kỹ năng chạy */
+        @keyframes loadProgress {
+            from { width: 0; }
+        }
+        .progress-bar {
+            animation: loadProgress 1.5s ease-out forwards;
+        }
     </style>
 </head>
 <body>
@@ -88,98 +96,112 @@
             </div>
 
             <div class="cv-section">
-    <h2>Kỹ Năng</h2>
-    <div class="skills-container">
-        <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
-            <div style="display: flex; justify-content: space-between; width: 100%;">
-                <span class="skill-name">Programming (Python, SQL, C#)</span>
-                <span style="color: #ffcc00;">90%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
-                <div style="width: 90%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
-            </div>
-        </div>
+                <h2>Kỹ Năng</h2>
+                <div class="skills-container">
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="skill-name">Programming (Python, SQL, C#)</span>
+                            <span style="color: #ffcc00;">90%</span>
+                        </div>
+                        <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
+                            <div class="progress-bar" style="width: 90%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
+                        </div>
+                    </div>
 
-        <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
-            <div style="display: flex; justify-content: space-between; width: 100%;">
-                <span class="skill-name">Network Security (TCP/IP, Firewall)</span>
-                <span style="color: #ffcc00;">85%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
-                <div style="width: 85%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
-            </div>
-        </div>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="skill-name">Network Security (TCP/IP, Firewall)</span>
+                            <span style="color: #ffcc00;">85%</span>
+                        </div>
+                        <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
+                            <div class="progress-bar" style="width: 85%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
+                        </div>
+                    </div>
 
-        <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
-            <div style="display: flex; justify-content: space-between; width: 100%;">
-                <span class="skill-name">Ethical Hacking Tools (Nmap, Burp Suite)</span>
-                <span style="color: #ffcc00;">80%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
-                <div style="width: 80%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
-            </div>
-        </div>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="skill-name">Ethical Hacking Tools (Nmap, Burp Suite)</span>
+                            <span style="color: #ffcc00;">80%</span>
+                        </div>
+                        <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
+                            <div class="progress-bar" style="width: 80%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
+                        </div>
+                    </div>
 
-        <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
-            <div style="display: flex; justify-content: space-between; width: 100%;">
-                <span class="skill-name">HTML/CSS</span>
-                <span style="color: #ffcc00;">95%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
-                <div style="width: 95%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
-            </div>
-        </div>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span style="color: #ffcc00;">95%</span>
+                        </div>
+                        <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
+                            <div class="progress-bar" style="width: 95%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
+                        </div>
+                    </div>
 
-        <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
-            <div style="display: flex; justify-content: space-between; width: 100%;">
-                <span class="skill-name">Tiếng Anh</span>
-                <span style="color: #ffcc00;">40%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
-                <div style="width: 40%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
-            </div>
-        </div>
-    </div>
-</div>
-                <div class="cv-section">
-                    <h2>Dự Án Tiêu Biểu</h2>
-
-                <div class="cv-item" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <h3>🖥️ Hệ Thống Quản Lý Internet Cafe</h3>
-                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Windows-based Integrated Management System</p>
-                    <p>Xây dựng hệ thống quản lý toàn diện cho phòng máy: tính giờ, quản lý kho và bảo mật dữ liệu khách hàng.</p>
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">C# / .NET</span>
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">SQL Server</span>
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">WinForms</span>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="skill-name">Tiếng Anh</span>
+                            <span style="color: #ffcc00;">40%</span>
+                        </div>
+                        <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; margin-top: 8px;">
+                            <div class="progress-bar" style="width: 40%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; box-shadow: 0 0 10px #667eea;"></div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="cv-item" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <h3>🌍 TravelStay: Smart Booking & Destination Discovery App</h3>
-                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Mobile Application</p>
-                    <p>Hệ thống đặt phòng du lịch tích hợp tìm kiếm và quản lý lịch trình trên thiết bị di động.</p>
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Android / Kotlin</span>
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Firebase</span>
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Material Design</span>
-                    </div>
+            <div class="cv-section">
+                <h2>Dự Án Tiêu Biểu</h2>
+                <div class="cv-item" style="margin-bottom: 2.5rem;">
+                <h3>🖥️ Hệ Thống Quản Lý Internet Cafe</h3>
+                <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">C# Desktop Application</p>
+                <p>Xây dựng phần mềm quản lý phòng máy tập trung, hỗ trợ tính tiền theo giờ, quản lý tài khoản người dùng và giám sát trạng thái máy trạm thời gian thực.</p>
+                
+                <div style="display: flex; gap: 15px; margin-top: 15px; margin-bottom: 15px;">
+                    <a href="https://github.com/Dragon3012/Internet-Cafe" target="_blank" class="project-link" style="text-decoration: none; color: #889afb; background: rgba(102, 126, 234, 0.1); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.3); font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="16" style="filter: invert(1);"> GitHub
+                    </a>
                 </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">C# / .NET</span>
+                    <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">WinForms</span>
+                    <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">SQL Server</span>
+                    <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Socket Programming</span>
+                </div>
+            </div>
 
                 <div class="cv-item" style="margin-bottom: 2.5rem;">
                     <h3>🌓 Dark Mode UI/UX Implementation</h3>
-                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Mobile Application</p>
-                    <p>Thiết kế và triển khai tính năng chuyển đổi giao diện sáng/tối tự động và thủ công cho các ứng dụngnhằm tối ưu hóa trải nghiệm người dùng.</p>
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">JavaScript</span>
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">CSS Variables</span>
-                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">LocalStorage</span>
+                    <p style="color: #a0a0a0; font-style: italic; margin-bottom: 10px;">Android App Feature Enhancement</p>
+                    <p>Thiết kế và triển khai tính năng chuyển đổi giao diện sáng/tối tự động và thủ công trên nền tảng Android, giúp tối ưu hóa trải nghiệm người dùng.</p>
+                    
+                    <div style="display: flex; gap: 15px; margin-top: 15px; margin-bottom: 15px;">
+                        <a href="https://github.com/Dragon3012/Dark-Mode" target="_blank" class="project-link" style="text-decoration: none; color: #889afb; background: rgba(102, 126, 234, 0.1); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.3); font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="16" style="filter: invert(1);"> GitHub
+                        </a>
+                        
+                        <a href="https://drive.google.com/drive/folders/1e3jwxi_CL6VVFrwtTekR811-vFkM_txi" target="_blank" class="project-link" style="text-decoration: none; color: #fff; background: linear-gradient(135deg, #e53935, #b71c1c); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);">
+                            🎬 Xem Video Demo (Drive)
+                        </a>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Android Studio</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">Java/Kotlin</span>
+                        <span style="background: rgba(102, 126, 234, 0.2); color: #889afb; padding: 2px 12px; border-radius: 15px; font-size: 0.85rem; border: 1px solid rgba(102, 126, 234, 0.3);">UI/UX</span>
                     </div>
                 </div>
             </div>
-                </div>
-            </div>
         </div>
+            <section class="cv-download-section">
+        <div class="cv-action-container" style="text-align: center; margin-top: 30px;">
+        <a href="Nguyen_Xuan_Truong_CV.pdf" download class="btn-download-pro">
+        <span class="icon">📥</span>
+        <span class="text">TẢI CV BẢN PDF</span>
+        </a>
+    </div>
+</section>
     </main>
 
     <div id="lightbox" onclick="this.style.display='none'">
@@ -187,7 +209,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Nguyễn Xuân Trường. Made with ❤️ at HUTECH</p>
+        <p>&copy; 2025 Nguyễn Xuân Trường.</p>
     </footer>
 
     <script>

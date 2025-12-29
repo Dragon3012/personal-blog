@@ -23,11 +23,27 @@ const blogPosts = {
                <p>Thứ ba, tiếng Anh phá vỡ rào cản văn hóa. Du học, du lịch, giao lưu quốc tế trở nên dễ dàng hơn, giúp mở rộng tầm nhìn và xây dựng mạng lưới quan hệ toàn cầu.</p>`
     },
     'bo-cuoc': {
-        title: '🌱 Tôi Đã Từng Muốn Bỏ Cuộc Và Cách Tôi Đứng Dậy',
+        title: '🌱 Hành Trình Từ Đứa Trẻ Trong "Vỏ Bọc" Đến Người Bảo Vệ Không Gian Mạng',
         date: '15/11/2025',
-        summary: 'Hành trình vượt qua hoang mang nhờ điểm tựa gia đình và trải nghiệm thực tế...',
-        body: `<p>Là sinh viên an toàn thông tin, tôi từng đứng giữa ngã ba đường của sự hoang mang. Giữa chừng con đường học vấn, tôi bỗng hụt hẫng khi nhận ra mình không biết tương lai sẽ đi về đâu.</p>
-               <p>Chính lúc tôi sắp gục ngã, gia đình đã không đứng ngoài cuộc. Bố mẹ đã ngồi lại trò chuyện, không chỉ là lời động viên mà còn giúp tôi tìm kiếm cơ hội thực tế. Anh họ làm trong ngành công nghệ đã giới thiệu tôi vào một dự án an toàn mạng nhỏ, nơi tôi được áp dụng kiến thức thực tế. Cái chạm đầu tiên với công việc thực tế đã thay đổi tất cả.</p>`
+        summary: 'Là một người con đất Nghệ An, tôi đã từng vấp ngã khi bước ra khỏi vòng tay cha mẹ để theo đuổi giấc mơ An toàn thông tin...',
+        body: `
+            <p>Tôi là một người con của mảnh đất miền Trung nắng gió Nghệ An, nơi mà cái nghèo cái khó thường được khỏa lấp bằng tinh thần hiếu học. Suốt những năm tháng thanh xuân, tôi lớn lên trong "vỏ bọc" bình yên và sự che chở tuyệt đối của cha mẹ. Với tôi lúc đó, thế giới chỉ là những trang sách và lời răn dạy dịu dàng.</p>
+            
+            <h3>1. Cú sốc khi bước ra khỏi "vùng an toàn"</h3>
+            <p>Ngày đặt chân vào Sài Gòn theo đuổi ngành An toàn Thông tin tại HUTECH, tôi mới thực sự hiểu thế nào là đơn độc. Giữa những dòng code khô khan, những thuật ngữ bảo mật phức tạp và áp lực tự lập, tôi bắt đầu hoang mang. Đã có lúc tôi gục ngã trước màn hình máy tính, tự hỏi mình là ai giữa thành phố hoa lệ này và liệu lựa chọn này có quá sức với một đứa trẻ vốn chỉ biết đến sự an bài?</p>
+            
+            <p><strong>Tôi đã từng muốn bỏ cuộc.</strong> Sự chênh lệch giữa kỳ vọng của gia đình và thực tế năng lực khiến tôi rơi vào trạng thái "burnout" trầm trọng. Tôi thấy mình như một kẻ đứng bên lề của ngành công nghệ đang vận động không ngừng.</p>
+
+            <h3>2. Điểm tựa quê hương và sự thức tỉnh</h3>
+            <p>Nhưng dòng máu kiên cường của người dân xứ Nghệ không cho phép tôi dừng lại. Trong những đêm dài trăn trở, tôi nhận ra gia đình không phải là "vỏ bọc" ngăn cản tôi trưởng thành, mà là "điểm tựa" để tôi bay cao hơn. Bố mẹ đã ngồi lại, lắng nghe những tâm tư chưa bao giờ tôi dám thổ lộ, tiếp thêm cho tôi bản lĩnh để đối mặt với thất bại.</p>
+
+            
+
+            <h3>3. Đứng dậy bằng trải nghiệm thực tế</h3>
+            <p>Thay vì trốn chạy, tôi chọn cách đối đầu. Tôi bắt đầu từ những dự án nhỏ nhất, xin vào làm thực tập sinh để hiểu giá trị của từng dòng code bảo mật. Khi những kiến thức về Firewall, SQL Injection không còn nằm trên trang giấy mà trở thành vũ khí để tôi bảo vệ hệ thống, tôi biết mình đã tìm lại được chính mình.</p>
+            
+            <p><em>Vấp ngã không phải là dấu chấm hết, đó chỉ là một dấu phẩy để tôi viết tiếp câu chuyện của mình một cách mạnh mẽ hơn. Từ một đứa trẻ được bảo vệ, giờ đây tôi khao khát trở thành một "Cyber Security Specialist" - người bảo vệ cho sự an toàn của cộng đồng trong không gian số.</em></p>
+        `
     },
     'dieu-hoc-duoc-tu-lap-trinh': {
         title: '💡 Những Điều Tôi Học Được Từ Lập Trình',
@@ -71,48 +87,97 @@ const blogPosts = {
                </ul>`
     },
     'lam-blog-ca-nhan': {
-        title: '💻 Tại Sao Mình Tự Code Blog Cá Nhân?',
+        title: '🚀 JavaScript: Ngôn Ngữ Của Mọi Trình Duyệt Và Tại Sao Bạn Phải Học Nó',
         date: '23/12/2025',
-        summary: 'Rèn luyện tư duy Front-end và xây dựng Portfolio chuyên nghiệp qua GitHub...',
-        body: `<p>Tự xây dựng Blog giúp mình rèn luyện tư duy Front-end và cách quản lý mã nguồn qua Git.</p>
-               <h3>1. Làm chủ quy trình</h3>
-               <p>Việc triển khai lên GitHub Pages dạy mình cách vận hành một trang web thực tế. Thay vì dùng các nền tảng có sẵn, việc tự code giúp mình hiểu sâu về HTML/CSS.</p>
-               <h3>2. Xây dựng Portfolio chuyên nghiệp</h3>
-               <p>Đây là một Portfolio sống động nhất để chứng minh năng lực tự học và sự tỉ mỉ của mình với nhà tuyển dụng.</p>`
+        summary: 'Tìm hiểu về ngôn ngữ lập trình phổ biến nhất thế giới và tầm quan trọng của nó trong cả phát triển phần mềm lẫn bảo mật...',
+        body: `
+            <p>Nếu coi HTML là khung xương, CSS là lớp áo bên ngoài, thì <strong>JavaScript (JS)</strong> chính là linh hồn giúp trang web có thể tương tác và hoạt động một cách thông minh. Xuất hiện từ năm 1995, đến nay JS đã trở thành ngôn ngữ không thể thiếu đối với bất kỳ lập trình viên nào.</p>
+
+            <h3>1. JavaScript thực sự là gì?</h3>
+            <p>JavaScript là một ngôn ngữ lập trình kịch bản dựa trên đối tượng, được sử dụng rộng rãi để tạo ra các hiệu ứng tương tác trên website. Điểm đặc biệt là JS chạy trực tiếp trên trình duyệt của người dùng (Client-side), giúp phản hồi ngay lập tức mà không cần chờ đợi máy chủ.</p>
+            
+            
+
+            <h3>2. Tại sao JavaScript lại là "vũ khí" bắt buộc phải học?</h3>
+            <ul>
+                <strong>Hệ sinh thái khổng lồ:</strong> Với sự ra đời của Node.js, bạn có thể dùng JS để viết cả Front-end, Back-end và ứng dụng di động (React Native).</li>
+                <strong>Khả năng tương tác mạnh mẽ:</strong> JS cho phép tạo ra các bản đồ tương tác, đồ họa 2D/3D, và xử lý dữ liệu thời gian thực mà không cần tải lại trang.</li>
+                <strong>Cánh cửa vào thế giới Cybersecurity:</strong> Đối với dân An toàn thông tin, hiểu rõ JS là điều bắt buộc để nhận diện và ngăn chặn các cuộc tấn công như <em>Cross-Site Scripting (XSS)</em> – nơi hacker chèn mã độc JS vào trình duyệt nạn nhân.</li>
+            </ul>
+
+            <h3>3. Ví dụ đơn giản về sức mạnh của JS</h3>
+            <p>Chỉ với vài dòng code, bạn có thể thay đổi hoàn toàn giao diện hoặc hành vi của trang web:</p>
+            <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0; border-left: 5px solid #f7df1e;">
+                <span style="color: #6a9955;">// Thay đổi màu nền trang web khi nhấn nút</span><br>
+                <span style="color: #569cd6;">document</span>.getElementById(<span style="color: #ce9178;">"myBtn"</span>).addEventListener(<span style="color: #ce9178;">"click"</span>, () => {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #569cd6;">document</span>.body.style.backgroundColor = <span style="color: #ce9178;">"#ffcc00"</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;alert(<span style="color: #ce9178;">"JavaScript đã thay đổi diện mạo trang này!"</span>);<br>
+                });
+            </div>
+
+            
+
+            <h3>Lời kết</h3>
+            <p>Học JavaScript không chỉ là học một ngôn ngữ, mà là học cách làm chủ trình duyệt. Dù mục tiêu của bạn là trở thành một Web Developer hay một chuyên gia bảo mật, JavaScript sẽ luôn là người bạn đồng hành không thể thiếu trên con đường sự nghiệp.</p>
+        `
     },
     'ddos-defense-strategy': {
-        title: '🛡️ DDoS: Cuộc Chiến Cân Não Và Chiến Lược Phòng Thủ Toàn Diện',
+        title: '🛡️ DDoS: Cuộc Chiến Đầy Căng Thẳng và Phòng Thủ Toàn Diện',
         date: '20/12/2025',
-        summary: 'Phân tích sâu về cơ chế tấn công từ chối dịch vụ phân tán và các giải pháp bảo mật đa lớp cho hệ thống hiện đại...',
+        summary: 'Phân tích sâu về cơ chế tấn công DDoS và các giải pháp mã nguồn thực tế để bảo vệ hệ thống.',
         body: `
             <p>Trong kỷ nguyên số, DDoS (Distributed Denial of Service) đã trở thành một trong những mối đe dọa hàng đầu đối với sự ổn định của hạ tầng mạng toàn cầu. Đây không chỉ là một kỹ thuật tấn công, mà là một cuộc chiến tiêu hao tài nguyên thực sự.</p>
 
             <h3>1. Cơ chế tấn công: Sức mạnh của sự phân tán</h3>
-            <p>DDoS là hình thức nâng cấp của DoS, nơi kẻ tấn công không sử dụng một nguồn duy nhất mà huy động một mạng lưới khổng lồ các thiết bị bị chiếm quyền điều khiển (Botnet). Lượng lớn yêu cầu đồng loạt đổ về khiến máy chủ mục tiêu rơi vào tình trạng quá tải tài nguyên trầm trọng từ băng thông, CPU đến bộ nhớ RAM.</p>
-            <p>Mục tiêu cuối cùng là làm tê liệt dịch vụ, khiến người dùng hợp lệ không thể truy cập, gây thiệt hại khổng lồ về kinh tế và uy tín cho doanh nghiệp.</p>
+            <p>DDoS là hình thức nâng cấp của DoS, nơi kẻ tấn công huy động một mạng lưới khổng lồ các thiết bị bị chiếm quyền điều khiển (Botnet). Lượng lớn yêu cầu đồng loạt đổ về khiến máy chủ mục tiêu quá tải tài nguyên từ băng thông đến CPU.</p>
+            
+            <p><strong>Mô phỏng kịch bản SYN Flood bằng Python (Scapy):</strong></p>
+            <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0;">
+                <span style="color: #6a9955;"># Gửi gói tin SYN giả mạo IP nguồn để treo kết nối</span><br>
+                <span style="color: #569cd6;">from</span> scapy.all <span style="color: #569cd6;">import</span> IP, TCP, send<br>
+                <span style="color: #569cd6;">import</span> random<br><br>
+                <span style="color: #569cd6;">def</span> <span style="color: #dcdcaa;">syn_flood</span>(target_ip, target_port):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;src_ip = <span style="color: #ce9178;">"."</span>.join(map(str, (random.randint(<span style="color: #b5cea8;">0</span>, <span style="color: #b5cea8;">255</span>) <span style="color: #569cd6;">for</span> _ <span style="color: #569cd6;">in</span> range(<span style="color: #b5cea8;">4</span>))))<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;pkt = IP(src=src_ip, dst=target_ip)/TCP(sport=random.randint(<span style="color: #b5cea8;">1024</span>,<span style="color: #b5cea8;">65535</span>), dport=target_port, flags=<span style="color: #ce9178;">"S"</span>)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;send(pkt, verbose=<span style="color: #569cd6;">False</span>)
+            </div>
+
+            
 
             <h3>2. Các hình thức tấn công phổ biến</h3>
             <ul>
-                <li><strong>tấn công tầng liên kết (Volume-based):</strong> Làm tràn ngập băng thông bằng các gói tin rác như UDP Flood hoặc ICMP Flood.</li>
-                <li><strong>tấn công giao thức (Protocol Attacks):</strong> Khai thác các kẽ hở trong giao thức mạng như SYN Flood nhằm làm cạn kiệt bảng trạng thái của tường lửa.</li>
-                <li><strong>tấn công tầng ứng dụng (Application Layer):</strong> Nguy hiểm và tinh vi nhất, tập trung vào các request HTTP GET/POST để vắt kiệt tài nguyên xử lý của Web Server.</li>
+                <strong>Tấn công tầng liên kết (Volume-based):</strong> UDP Flood hoặc ICMP Flood làm tràn ngập băng thông.</li>
+                <strong>Tấn công giao thức (Protocol Attacks):</strong> SYN Flood làm cạn kiệt bảng trạng thái của tường lửa.</li>
+                <strong>Tấn công tầng ứng dụng (Application Layer):</strong> Tập trung vào request HTTP GET/POST để vắt kiệt CPU/RAM.</li>
             </ul>
-
-            
 
             <h3>3. Chiến lược phòng thủ đa lớp (Defense in Depth)</h3>
-            <p>Trước các cuộc tấn công ngày càng tinh vi, việc phòng thủ cần được triển khai trên nhiều lớp khác nhau:</p>
-            <ul>
-                <li><strong>Tường lửa (Firewall) & IDS/IPS:</strong> Thiết lập hàng rào ngăn chặn các mẫu truy cập bất thường và lọc lưu lượng độc hại ngay từ cửa ngõ.</li>
-                <li><strong>Rate Limiting:</strong> Cơ chế giới hạn số lượng yêu cầu từ một nguồn trong một khoảng thời gian nhất định để ngăn chặn spam request.</li>
-                <li><strong>Cân bằng tải (Load Balancing):</strong> Phân phối lưu lượng truy cập qua nhiều máy chủ khác nhau, giúp giảm áp lực cho một điểm duy nhất và duy trì tính sẵn sàng.</li>
-                <li><strong>Cloud-based Anti-DDoS:</strong> Sử dụng các dịch vụ đám mây chuyên dụng (như Cloudflare, Akamai) để "hấp thụ" và làm sạch lưu lượng truy cập khổng lồ trước khi nó chạm tới máy chủ của bạn.</li>
-            </ul>
+            
+            <p><strong>A. Giới hạn lưu lượng (Rate Limiting) với Nginx:</strong></p>
+            <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0;">
+                <span style="color: #6a9955;"># Giới hạn mỗi IP chỉ được gửi 10 requests/giây</span><br>
+                limit_req_zone $binary_remote_addr zone=mylimit:10m rate=10r/s;<br><br>
+                server {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;location / {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limit_req zone=mylimit burst=5 nodelay;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                }
+            </div>
+
+            <p><strong>B. Cấu hình Iptables chống SYN Flood:</strong></p>
+            <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0;">
+                <span style="color: #6a9955;"># Chặn IP nếu có hơn 20 kết nối SYN đồng thời</span><br>
+                iptables -A INPUT -p tcp --syn -m connlimit --connlimit-above 20 -j DROP<br>
+                <span style="color: #6a9955;"># Bật SYN Cookies</span><br>
+                sysctl -w net.ipv4.tcp_syncookies=1
+            </div>
+
+            
 
             <h3>4. Giám sát và Ứng phó sự cố</h3>
-            <p>Phòng bệnh hơn chữa bệnh. Việc giám sát hệ thống liên tục giúp phát hiện sớm các dấu hiệu bất thường về lưu lượng. Đồng thời, xây dựng một kịch bản ứng phó sự cố (Incident Response Plan) rõ ràng sẽ giúp đội ngũ kỹ thuật phản ứng nhanh chóng, giảm thiểu tối đa thời gian downtime và thiệt hại kinh tế.</p>
+            <p>Việc giám sát liên tục giúp phát hiện sớm bất thường. Xây dựng kế hoạch ứng phó giúp giảm thiểu tối đa thời gian downtime và thiệt hại kinh tế.</p>
             
-            <p><em>Kết luận: An toàn thông tin là một hành trình, không phải là đích đến. Hiểu rõ về DDoS là bước đầu tiên để xây dựng một hệ thống bền bỉ trước mọi cơn sóng dữ của không gian mạng.</em></p>
+            <p><em>Kết luận: An toàn thông tin là một hành trình. Hiểu rõ DDoS là bước đầu tiên để bảo vệ giá trị số của doanh nghiệp.</em></p>
         `
     },
 };

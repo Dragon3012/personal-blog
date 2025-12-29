@@ -656,4 +656,35 @@ footer p:last-child {
     border-radius: 10px;
     font-weight: bold;
 }
+.btn-download-pro {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #6d28d9 0%, #db2777 100%); /* Màu tím sang hồng hồng */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: none;
+    /* Tạo chiều sâu cho nút */
+    box-shadow: 0 10px 20px rgba(109, 40, 217, 0.3), 
+                inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.btn-download-pro:hover {
+    transform: translateY(-5px); /* Nút nổi hẳn lên khi di chuột vào */
+    box-shadow: 0 15px 30px rgba(219, 39, 119, 0.4), 
+                inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+.btn-download-pro:active {
+    transform: translateY(0); /* Hiệu ứng nhấn nút */
+    box-shadow: 0 5px 10px rgba(109, 40, 217, 0.2);
+}
 }
