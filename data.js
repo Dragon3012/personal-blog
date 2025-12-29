@@ -56,13 +56,21 @@ const blogPosts = {
                <p>Các dự án lớn dạy mình về quản lý thời gian ⏱️ và kỹ năng hợp tác 🤝. Không có dự án phần mềm nào thành công mà không có sự giao tiếp rõ ràng và làm việc nhóm hiệu quả.</p>`
     },
     'bai-hoc-quan-ly-quan-net': {
-        title: '🛠️ Bài Học "Xương Máu" Từ Dự Án Quán Net',
-        date: '20/12/2025',
-        summary: 'Xây dựng hệ thống thực tế và những bài học về bảo mật dữ liệu khách hàng...',
-        body: `<p>Dự án này là "chiến trường" thực tế đầu tiên giúp mình hiểu thế nào là xây dựng một hệ thống thực thụ.</p>
-               <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0; border: 1px solid #333;">// Bảo mật mật khẩu khách hàng bằng BCrypt<br>string hashedPassword = BCrypt.HashPassword(rawPassword);<br>// Luôn băm mật khẩu trước khi lưu vào DB!</div>
-               <p>Hơn cả việc bảo vệ dữ liệu, mình nhận ra rằng bảo mật là yếu tố sống còn của hệ thống quản lý. Từ việc kiểm soát quyền truy cập admin đến mã hóa dữ liệu giao dịch.</p>`
-    },
+    title: '🛠️ Bài Học "Xương Máu" Từ Dự Án Quán Net',
+    date: '20/12/2025',
+    summary: 'Xây dựng hệ thống quản lý phòng máy thực tế và những bài học về bảo mật dữ liệu khách hàng...',
+    body: `<p>Dự án <strong>QUẢN LÝ INTERNET CAFE</strong> là "chiến trường" thực tế đầu tiên giúp mình hiểu thế nào là xây dựng một hệ thống thực thụ. Dự án kết hợp sức mạnh của <strong>C#, SQL và Python</strong> để tối ưu hóa thao tác quản lý.</p>
+           
+           <div style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 10px; font-family: monospace; margin: 20px 0; border: 1px solid #333; line-height: 1.5;">
+               <span style="color: #6a9955;">// Bảo mật mật khẩu khách hàng bằng BCrypt</span><br>
+               <span style="color: #9cdcfe;">string</span> hashedPassword = BCrypt.<span style="color: #dcdcaa;">HashPassword</span>(rawPassword);<br>
+               <span style="color: #6a9955;">// Luôn băm mật khẩu trước khi lưu vào DB!</span>
+           </div>
+
+           <p>Hơn cả việc bảo vệ dữ liệu, mình nhận ra bảo mật là yếu tố sống còn của hệ thống. Từ việc thiết kế hệ thống tính phí, theo dõi máy trạm đến mã hóa dữ liệu giao dịch, mọi chi tiết đều được tối ưu hóa để đảm bảo an toàn thông tin.</p>
+           
+           <p>Xem chi tiết mã nguồn tại: <a href="https://github.com/Dragon3012/Internet-Cafe" target="_blank" style="color: #bb86fc; text-decoration: none;">GitHub - Internet Cafe</a>.</p>`
+},
     'review-chung-chi-cisco': {
         title: '🎓 Review Lấy Chứng Chỉ Cisco Networking Basics',
         date: '21/12/2025',
